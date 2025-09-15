@@ -1,0 +1,49 @@
+Windows:
+Instalar python
+Ejecución: python programa.py "-opcional"
+
+Linux:
+sudo apt update
+sudo apt install python3 python3-tk
+
+Ejecución: python3 programa.py "-opcional"
+
+Fedora:
+sudo dnf install python3 python3-tkinter
+
+Ejecución: python3 programa.py "-opcional"
+
+Arch:
+sudo pacman -S python tk
+
+Ejecución: python3 programa.py "-opcional"
+
+macOS:
+1) Instalar Python oficial (python.org) suele incluir tkinter.
+2) Con Homebrew:
+brew install python tcl-tk
+
+Ejecución: python programa.py "-opcional"
+
+Parámetros "opcionales":
+
+--interfaz : Abre la interfaz de configuración.
+
+--once : Ejecuta el programa solo una vez.
+
+¿Qué hace el programa?
+
+Sincronización de carpetas
+	-Selecciona una carpeta de entrada y otra de salida.
+	-Todo lo que se copie en la carpeta de entrada se replicará automáticamente en la de salida.
+
+Integración con GitHub
+	-Vincula un usuario y un token de GitHub.
+	-Si creas o colocas en entrada una carpeta con # en su nombre, el programa crea un repositorio con ese nombre en tu cuenta de GitHub.
+	-Toda carpeta de salida que coincida en nombre con un repositorio existente se vinculará y subirá automáticamente su contenido.
+
+Manejo de versiones
+	-Los archivos duplicados en GitHub se reemplazan.
+	-Antes de reemplazar en la salida, se guarda una copia en old_versions (a menos que el archivo sea idéntico).
+
+-- Si la salida tiene contraseña, te la pedirá una única vez --
